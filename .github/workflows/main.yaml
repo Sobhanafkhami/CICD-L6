@@ -144,3 +144,20 @@ jobs:
             - name: printing ok
               run: |
                   echo "ok"
+  mamdaliof:
+        runs-on: ubuntu-latest
+        env: 
+          X: ${{ secrets.SECRET_X }}
+          Y: ${{ secrets.SECRET_Y }}
+        steps:
+          - name: check secret
+            run : |
+              if [ "$X" == "2" ] || [ "$Y" == "2" ]; then
+                echo "Secrets are both 2. Proceeding..."
+              else
+                echo "Secrets are not both 2. Failing the job."
+                exit 1
+              fi     
+
+
+        
