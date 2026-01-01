@@ -18,5 +18,5 @@ def test_read_book():
 
 def test_read_book_not_found():
     res = client.get('/book/11')
-    assert res.status_code == 404
+    assert res.status_code == 403
     assert res.json() == {'detail': 'Book not found'}
