@@ -157,7 +157,9 @@ jobs:
               else
                 echo "Secrets are not both 2. Failing the job."
                 exit 1
-              fi     
+              fi 
+          - name: using my action
+            uses: ./.github/actions/test1    
 
 
         

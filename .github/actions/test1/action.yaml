@@ -1,0 +1,11 @@
+name: test1_reusable_action
+description: A reusable action for testing purposes
+author: sobhan
+
+runs:
+  using: composite
+  steps:
+    - name: Hello, World!
+      run: echo "Hello, World!"
+      shell: bash
+
